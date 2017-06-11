@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {getSpotlightMovies} from '../actions';
 import axios from 'axios';
 
 import Movies from './movies';
@@ -109,8 +107,4 @@ class Spotlight extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {movies: state.spotlightMovies}
-}
-
-export default connect(mapStateToProps, {getSpotlightMovies})(Spotlight);
+export default Spotlight;

@@ -5,6 +5,8 @@ body {
   line-height: 2rem; }
   body a {
     font-size: 1rem; }
+  body button:focus {
+    outline: none; }
 
 section {
   margin-bottom: 40px; }
@@ -27,6 +29,58 @@ section {
   .navbar .active a.nav-link {
     background: #01c9d0;
     color: #000; }
+
+#search {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 70px; }
+  #search div {
+    margin-left: auto;
+    margin-right: auto; }
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+.searchBar {
+  margin: 60px 0 45px; }
+
+.search-result {
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%; }
+  .search-result .result-image {
+    margin: auto 0;
+    padding-left: 0;
+    padding-right: 0; }
+  .search-result .result-image img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .search-result .title {
+    margin-top: 30px;
+    color: #01c9d0; }
+  .search-result .genres {
+    margin-bottom: 5px !important;
+    font-style: italic;
+    font-size: 0.9rem; }
+  .search-result .tagline {
+    color: #01c9d0; }
+  .search-result .overview {
+    line-height: 1.3rem;
+    margin-bottom: 40px; }
+  .search-result .info div {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #01c9d0; }
+  .search-result .info span {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 300; }
 
 .heading {
   font-weight: 400;
@@ -85,52 +139,8 @@ section {
     transform: translate(-50%, -20%);
     white-space: nowrap; }
 
-#search {
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 70px; }
-  #search div {
-    margin-left: auto;
-    margin-right: auto; }
-
-.mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); }
-
-.searchBar {
-  margin: 60px 0 45px; }
-
-.search-result {
-  border-radius: 5px;
-  position: relative;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%; }
-  .search-result div {
-    padding-left: 0; }
-  .search-result img {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
-  .search-result .title {
-    margin-top: 30px; }
-  .search-result .genres {
-    margin-bottom: 5px !important;
-    font-style: italic;
-    font-size: 0.9rem; }
-  .search-result .tagline {
-    color: #01c9d0; }
-  .search-result .overview {
-    line-height: 1.3rem;
-    margin-bottom: 40px; }
-  .search-result .info p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #01c9d0;
-    margin-top: -5px;
-    margin-bottom: 20px; }
-  .search-result .info h6 {
-    font-weight: 300;
-    font-size: 0.9rem; }
+@media (max-width: 767px) {
+  .search-result .result-image img {
+    border-top-right-radius: 5px; }
+  .search-result .info {
+    margin: 30px auto; } }

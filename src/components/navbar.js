@@ -15,10 +15,7 @@ const Navbar = (props) => {
 				            <a className="nav-link" href="#">Home</a>
 				        </li>
 				        <li className="nav-item">
-				            <a className="nav-link" href="#">Movies</a>
-				        </li>
-				        <li className="nav-item">
-				            <a className="nav-link" href="#">TV Series</a>
+				            <a className="nav-link" href="https://github.com/annietoo/react-tmdb-app">Github</a>
 				        </li>
 			     	</ul>
 			    </div>

@@ -31,18 +31,6 @@ class Search extends Component {
 					
 					return {options: results};
 				}).catch((error) => console.log(error));
-		// console.log(`${ROOT_URL}search/movie/?query=${input}&page=1&api_key=${API_KEY}`);
-		// return fetch(`${ROOT_URL}search/movie/?query=last&page=1&api_key=${API_KEY}`)
-		// 			.then((res) => res.json())
-		// 			.then((data) => {
-		// 				const results = data.results.map((result) => {
-		// 					return {value: result.title, label: result.title}	
-		// 				});
-		// 				return {options: results};
-		// 			});
-
-		// const ret = axios.get("https://api.themoviedb.org/3/search/movie?query=last&api_key=e8174be6da251dccb28b91ea2e221b2d")
-		// .then((res) => console.log(res));
 	}
 
 	onSelect(val) {
@@ -60,7 +48,7 @@ class Search extends Component {
 			    <div className="mask"></div>
 			    <div className="container">
 			    	<div className="row">
-			    		<div className="col-sm-4 searchBar">
+			    		<div className="col-sm-6 col-md-4 searchBar">
 				    		<Select.Async
 				    			name="form-field-name"
 				    			value="one"
