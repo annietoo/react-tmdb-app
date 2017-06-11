@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import Select from 'react-select'
 import axios from 'axios';
-import SearchBar from './searchBar';
 import SearchResult from './searchResult';
-
 
 import {ROOT_URL, API_KEY} from './App';
 
@@ -21,22 +19,22 @@ class Search extends Component {
 	}
 
 	fetchMovie(input) {
-		const a = "hello";
-		return axios.get(`${ROOT_URL}search/movie?query=${input}&page=1&api_key=${API_KEY}`)
-				.then((res) => {
-					console.log(res.data.results);
-					const results = res.data.results.map((result) => {
-							return {value: result.id, label: result.title}	
-						});
-					
-					return {options: results};
-				}).catch((error) => console.log(error));
+		if (input !== '') {
+			return axios.get(`${ROOT_URL}search/movie?query=${input}&page=1&api_key=${API_KEY}`)
+					.then((res) => {
+						console.log(res.data.results);
+						const results = res.data.results.map((result) => {
+								return {value: result.id, label: result.title}	
+							});
+						
+						return {options: results};
+					}).catch((error) => console.log(error));
+		}
 	}
 
 	onSelect(val) {
-		const movie = axios.get(`${ROOT_URL}movie/${val.value}?api_key=${API_KEY}`).
-			then((res) => {
-				console.log(res.data);
+		axios.get(`${ROOT_URL}movie/${val.value}?api_key=${API_KEY}`)
+			.then((res) => {
 				this.setState({movie: res.data, genres: res.data.genres});
 			});
 	}

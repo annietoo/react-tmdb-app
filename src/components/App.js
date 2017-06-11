@@ -3,7 +3,6 @@ import Navbar from './navbar';
 import Spotlight from './spotlight';
 import Search from './search';
 
-import logo from '../logo.svg';
 import './App.css';
 import 'react-select/dist/react-select.css';
 

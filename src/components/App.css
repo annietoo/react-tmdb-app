@@ -143,4 +143,6 @@ section {
   .search-result .result-image img {
     border-top-right-radius: 5px; }
   .search-result .info {
-    margin: 30px auto; } }
+    margin: 30px auto; }
+  .pills a {
+    font-size: 0.9rem; } }

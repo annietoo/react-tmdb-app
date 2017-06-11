@@ -18,7 +18,7 @@ class Spotlight extends Component {
 
 
 	fetchMovies(url) {
-		const data = axios.get(`${ROOT_URL}discover/movie?${url}&api_key=${API_KEY}`)
+		axios.get(`${ROOT_URL}discover/movie?${url}&api_key=${API_KEY}`)
 			.then((res) => {
 				this.setState({
 					movies: this.getFirst4Results(res.data.results)
