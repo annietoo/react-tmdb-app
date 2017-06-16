@@ -62,7 +62,8 @@ section {
     border-bottom-left-radius: 5px; }
   .search-result .title {
     margin-top: 30px;
-    color: #01c9d0; }
+    color: #01c9d0;
+    font-weight: 500; }
   .search-result .genres {
     margin-bottom: 5px !important;
     font-style: italic;
@@ -72,6 +73,9 @@ section {
   .search-result .overview {
     line-height: 1.3rem;
     margin-bottom: 40px; }
+  .search-result .info {
+    margin-bottom: 30px;
+  }
   .search-result .info div {
     font-weight: 600;
     font-size: 1.1rem;
